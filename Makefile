@@ -13,6 +13,15 @@ pdf:
 	@sleep 1
 	@rm yadm.ps
 
+.PHONY: docs
+docs:
+	@echo "# Installation" > INSTALL.md.tmp
+	@echo "" >> INSTALL.md.tmp
+	@sed -n '/<!-- toc -->/,$$p' INSTALL.md | perl -ne "next unless m/^(###+) (.+)$$/; \$$level = length(\$$1) - 3; \$$link = lc(\$$text = \$$2); \$$link =~ s/[^a-z ]//g; \$$link =~ s/ /-/g; print '    'x\$$level . \"- [\$$text](#\$$link)\n\"; " >> INSTALL.md.tmp
+	@echo "" >> INSTALL.md.tmp
+	@sed -n '/<!-- toc -->/,$$p' INSTALL.md >> INSTALL.md.tmp
+	@mv INSTALL.md.tmp INSTALL.md
+
 .PHONY: test
 test: bats shellcheck
 

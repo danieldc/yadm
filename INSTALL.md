@@ -1,5 +1,14 @@
 # Installation
 
+- [OSX](#osx)
+- [Fedora / Red Hat / CentOS — (YUM / RPM)](#fedora--red-hat--centos--yum--rpm)
+- [Debian / Ubuntu](#debian--ubuntu)
+- [Arch Linux](#arch-linux)
+- [Gentoo Linux](#gentoo-linux)
+- [Other](#other)
+
+<!-- toc -->
+
 ### OSX
 
 **yadm** can be installed using [Homebrew](https://github.com/Homebrew/homebrew).
@@ -44,7 +53,7 @@ repository, you also need to add this to the portage `make.conf`
 
     echo 'PORTDIR_OVERLAY="/usr/local/portage"' >> /etc/portage/make.conf
 
-#### Other
+### Other
 
 You *can* simply download the **yadm** script and put it into your `$PATH`. Something like this:
 
