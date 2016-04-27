@@ -17,42 +17,7 @@ As so many others, I started out with a repository of dotfiles and a few scripts
 ## Installation
 _Seek home for rest, for home is best._—Thomas Tusser
 
-#### OSX
-
-**yadm** can be installed using [Homebrew](https://github.com/Homebrew/homebrew).
-
-    brew tap TheLocehiliosan/yadm && brew install yadm
-
-#### Fedora/Redhat/CentOS YUM/RPM
-
-Several yum repositories are on Copr. Follow this link for [repositories and installation instructions](https://copr.fedorainfracloud.org/coprs/thelocehiliosan/yadm/).
-
-#### Arch Linux
-
-**yadm** is available in the Arch User Repos and can be installed with AUR helper or Makepkg
-
-    yaourt -S yadm
-
-#### Gentoo Linux
-
-**yadm** is not yet available in the main gentoo portage tree, however an ebuild
-is available for you to use
-
-    mkdir -p /usr/local/portage/app-admin/yadm
-    cd $_
-    curl -O 'https://raw.githubusercontent.com/TheLocehiliosan/yadm/master/gentoo/yadm-1.04.ebuild' -O 'https://raw.githubusercontent.com/TheLocehiliosan/yadm/master/gentoo/Manifest'
-    emerge -atv app-admin/yadm
-
-If you have not configured portage to use `/usr/local/portage` as your local
-repository, you also need to add this to the portage `make.conf`
-
-    echo 'PORTDIR_OVERLAY="/usr/local/portage"' >> /etc/portage/make.conf
-
-#### Other
-
-You *can* simply download the **yadm** script and put it into your `$PATH`. Something like this:
-
-    curl -fLo /usr/local/bin/yadm https://github.com/TheLocehiliosan/yadm/raw/master/yadm && chmod a+x /usr/local/bin/yadm
+**yadm** is designed to be very portable. The varied methods of installation are detailed on [this page](INSTALL.md).
 
 ## Getting Started
 _I would not change my blest estate for all the world calls good or great._—Isaac Watts
